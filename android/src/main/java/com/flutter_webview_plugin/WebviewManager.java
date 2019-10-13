@@ -134,17 +134,17 @@ class WebviewManager {
         webView.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (event.getAction() == KeyEvent.ACTION_DOWN) {
-                    switch (keyCode) {
-                    case KeyEvent.KEYCODE_BACK:
-                        if (webView.canGoBack()) {
-                            webView.goBack();
-                        } else {
-                            FlutterWebviewPlugin.channel.invokeMethod("onBack", null);
-                        }
-                        return true;
-                    }
-                }
+                // if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                // switch (keyCode) {
+                // case KeyEvent.KEYCODE_BACK:
+                // if (webView.canGoBack()) {
+                // webView.goBack();
+                // } else {
+                // FlutterWebviewPlugin.channel.invokeMethod("onBack", null);
+                // }
+                // return true;
+                // }
+                // }
 
                 return false;
             }
