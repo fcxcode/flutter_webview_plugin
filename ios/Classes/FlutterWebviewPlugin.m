@@ -291,6 +291,12 @@ static NSString *const CHANNEL_NAME = @"flutter_webview_plugin";
     }
 }
 
+- (void)clearCache {
+    if (self.webview != nil) {
+        [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    }
+}
+
 - (void)cleanCookies {
     [[NSURLSession sharedSession] resetWithCompletionHandler:^{
         }];
